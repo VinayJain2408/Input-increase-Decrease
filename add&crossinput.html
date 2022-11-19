@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add & cross Input</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <input type="text" placeholder="name"><br>
+        <input type="text" placeholder="Role"><a href="">+</a><br>
+        <input type="submit" value="register">
+    </div>
+
+    <script>
+        let plus = document.querySelector("a")
+        plus.onclick = function (e) {
+            e.preventDefault();
+            let div = document.createElement("div")
+            let span = document.createElement("span")
+            let input = document.createElement("input")
+            div.appendChild(input);
+            div.appendChild(span);
+            input.setAttribute("type", "text")
+            input.setAttribute("placeholder", "Role")
+            span.innerHTML = "&times;";
+
+            document.querySelector("input:nth-of-type(2)").insertAdjacentElement("afterend",div)
+            
+        }
+
+    </script>
+</body>
+
+</html>
