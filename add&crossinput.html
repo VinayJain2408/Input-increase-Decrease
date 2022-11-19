@@ -28,8 +28,14 @@
             input.setAttribute("placeholder", "Role")
             span.innerHTML = "&times;";
 
-            document.querySelector("input:nth-of-type(2)").insertAdjacentElement("afterend",div)
-            
+            document.querySelector("input:nth-of-type(2)").insertAdjacentElement("afterend", div)
+
+            let cross = document.querySelectorAll("span")
+            for (let i = 0; i <=cross.length; i++) {
+                cross[i].onclick = function () {
+                    cross[i].parentElement.remove()
+                }
+            }
         }
 
     </script>
